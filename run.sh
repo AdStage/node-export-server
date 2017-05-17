@@ -4,6 +4,6 @@ term_handler() {
 }
 
 trap term_handler TERM INT
-bin/cli.js --enableServer 1 &
+bin/cli.js --enableServer 1 --port $PORT &
 PID=$!
 wait $!
